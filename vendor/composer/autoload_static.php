@@ -16,6 +16,11 @@ class ComposerStaticInitc315e57aa97700115d2f6f27e17b43a1
         array (
             'Psr\\Http\\Message\\' => 17,
         ),
+        'M' => 
+        array (
+            'Model\\' => 6,
+            'MVC\\' => 4,
+        ),
         'I' => 
         array (
             'Intervention\\Image\\' => 19,
@@ -24,9 +29,9 @@ class ComposerStaticInitc315e57aa97700115d2f6f27e17b43a1
         array (
             'GuzzleHttp\\Psr7\\' => 16,
         ),
-        'A' => 
+        'C' => 
         array (
-            'App\\' => 4,
+            'Controllers\\' => 12,
         ),
     );
 
@@ -34,6 +39,14 @@ class ComposerStaticInitc315e57aa97700115d2f6f27e17b43a1
         'Psr\\Http\\Message\\' => 
         array (
             0 => __DIR__ . '/..' . '/psr/http-message/src',
+        ),
+        'Model\\' => 
+        array (
+            0 => __DIR__ . '/../..' . '/models',
+        ),
+        'MVC\\' => 
+        array (
+            0 => __DIR__ . '/../..' . '/',
         ),
         'Intervention\\Image\\' => 
         array (
@@ -43,9 +56,9 @@ class ComposerStaticInitc315e57aa97700115d2f6f27e17b43a1
         array (
             0 => __DIR__ . '/..' . '/guzzlehttp/psr7/src',
         ),
-        'App\\' => 
+        'Controllers\\' => 
         array (
-            0 => __DIR__ . '/../..' . '/classes',
+            0 => __DIR__ . '/../..' . '/controllers',
         ),
     );
 

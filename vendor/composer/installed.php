@@ -1,24 +1,24 @@
 <?php return array (
   'root' => 
   array (
-    'pretty_version' => '1.0.0+no-version-set',
-    'version' => '1.0.0.0',
+    'pretty_version' => 'dev-main',
+    'version' => 'dev-main',
     'aliases' => 
     array (
     ),
-    'reference' => NULL,
+    'reference' => '6d3532e9312f7fb39519d9ca996f350ba598c567',
     'name' => 'german/bienesraices',
   ),
   'versions' => 
   array (
     'german/bienesraices' => 
     array (
-      'pretty_version' => '1.0.0+no-version-set',
-      'version' => '1.0.0.0',
+      'pretty_version' => 'dev-main',
+      'version' => 'dev-main',
       'aliases' => 
       array (
       ),
-      'reference' => NULL,
+      'reference' => '6d3532e9312f7fb39519d9ca996f350ba598c567',
     ),
     'guzzlehttp/psr7' => 
     array (
