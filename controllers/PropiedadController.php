@@ -22,6 +22,7 @@ class PropiedadController
         $propiedad = new Propiedad;
         $vendedores = Vendedor::all();
 
+        debuguear($vendedores);
         $router->render('propiedades/crear', [
             'propiedad' => $propiedad,
             'vendedores' => $vendedores

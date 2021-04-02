@@ -30,7 +30,7 @@ private static $installed = array (
     'aliases' => 
     array (
     ),
-    'reference' => '6d3532e9312f7fb39519d9ca996f350ba598c567',
+    'reference' => '9f3f660fb5959ff16f95566af92d6a9f24ecbee9',
     'name' => 'german/bienesraices',
   ),
   'versions' => 
@@ -42,7 +42,7 @@ private static $installed = array (
       'aliases' => 
       array (
       ),
-      'reference' => '6d3532e9312f7fb39519d9ca996f350ba598c567',
+      'reference' => '9f3f660fb5959ff16f95566af92d6a9f24ecbee9',
     ),
     'guzzlehttp/psr7' => 
     array (
