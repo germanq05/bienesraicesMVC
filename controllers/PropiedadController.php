@@ -13,7 +13,7 @@ class PropiedadController
         $resultado = null;
         $router->render('propiedades/admin', [
             'propiedades' => $propiedades,
-            'resultado' =>$resultado
+            'resultado' => $resultado
         ]);
     }
 

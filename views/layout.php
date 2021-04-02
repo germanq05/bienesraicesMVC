@@ -5,7 +5,7 @@
         session_start();
     }
 
-    $auth = $_SESSION['login'] ?? null;
+    $auth = $_SESSION['login'] ?? false;
 
     if(!isset($inicio)){
         $inicio = false;
@@ -20,7 +20,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bienes raices</title>
-    <link rel="stylesheet" href="../public/build/css/app.css">
+    <link rel="stylesheet" href="../build/css/app.css">
 </head>
 
 <body>
@@ -36,7 +36,7 @@
                 </div>
 
                 <div class="derecha">
-                    <img src="../public//build/img/dark-mode.svg" alt="Boton Dark" class="dark-mode-boton">
+                    <img src="../public/build/img/dark-mode.svg" alt="Boton Dark" class="dark-mode-boton">
 
                     <nav class="navegacion">
                         <a href="nosotros.php">Nosotros</a>

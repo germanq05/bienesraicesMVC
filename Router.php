@@ -44,7 +44,6 @@ class Router
     //Muestra una vista
     public function render($view, $datos = [])
     {
-
         foreach ($datos as $key => $value) {
             $$key = $value; //Variable de Variable, mantiene el nombre y no pierde el valor
         }
