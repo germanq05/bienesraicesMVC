@@ -29,7 +29,7 @@ class Router
         if ($metodo === 'GET') {
             $fn = $this->rutasGET[$urlActual] ?? null;
         } else {
-            $fn = $this->rutasPOSTs[$urlActual] ?? null;
+            $fn = $this->rutasPOST[$urlActual] ?? null;
         }
 
         if ($fn) {

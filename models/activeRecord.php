@@ -99,7 +99,7 @@ class ActiveRecord
         $resultado = self::$db->query($query);
         if ($resultado) {
             //Redireccionar el usuario
-            header('Location: /admin?resultado=1');
+            header('Location: /../public/admin?resultado=1');
         }
     }
 
