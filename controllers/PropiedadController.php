@@ -14,12 +14,15 @@ class PropiedadController
         $propiedades = Propiedad::all();
         $resultado = null;
 
+        $vendedores = Vendedor::all();
+
         //Muestra mensaje condicional
         $resultado = $_GET['resultado'] ?? null;
 
         $router->render('propiedades/admin', [
             'propiedades' => $propiedades,
-            'resultado' => $resultado
+            'resultado' => $resultado,
+            'vendedores' => $vendedores
         ]);
     }
 
@@ -65,7 +68,7 @@ class PropiedadController
 
         $router->render('propiedades/crear', [
             'propiedad' => $propiedad,
-            'vendedores' => $vendedores, 
+            'vendedores' => $vendedores,
             'errores' => $errores
         ]);
     }
@@ -74,9 +77,62 @@ class PropiedadController
     {
         $id = validarORedireccionar('/admin');
         $propiedad = Propiedad::find($id);
+        $errores = Propiedad::getErrores();
+        $vendedores = Vendedor::all();
 
-        $router->render('/public/propiedades/actualizar',[
-            'propiedad' => $propiedad
+
+        //Ejecutar el codigo despues que el usuario envia el formulario
+        if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+
+            //Asignar los atributos
+            $args = $_POST['propiedad'];
+
+
+            $propiedad->sincronizar($args);
+
+            //Validacion
+            $errores = $propiedad->validar();
+
+            //Generar un nombre unico
+            $nombreImagen = md5(uniqid(rand(), true)) . ".jpg";
+
+            //Subida de Archivos
+            if ($_FILES['propiedad']['tmp_name']['imagen']) {
+                $image = Image::make($_FILES['propiedad']['tmp_name']['imagen'])->fit(800, 600);
+                $propiedad->setImagen($nombreImagen);
+            }
+
+            //Revisar que el arreglo de errores este vacio
+            if (empty($errores)) {
+                if ($_FILES['propiedad']['tmp_name']['imagen']) {
+                    //Almacenar imagen
+                    $image->save(CARPETA_IMAGENES . $nombreImagen);
+                }
+                //Insertar en la bd
+                $propiedad->guardar();
+            }
+        }
+        $router->render('propiedades/actualizar', [
+            'propiedad' => $propiedad,
+            'errores' => $errores,
+            'vendedores' => $vendedores
         ]);
+    }
+
+    public static function eliminar()
+    {
+        if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+            $id = $_POST['id'];
+            $id = filter_var($id, FILTER_VALIDATE_INT);
+            if ($id) {
+
+                $tipo = $_POST['tipo'];
+
+                if (validarTipoContenido($tipo)) {
+                    $propiedad = Propiedad::find($id);
+                    $propiedad->eliminar();
+                }
+            }
+        }
     }
 }
