@@ -28,6 +28,7 @@ class Vendedor extends ActiveRecord
     public function validar(){
         if (!$this->nombre) {
             self::$errores[] = "Debes añadir el nombre del vendedor.";
+            
         }
 
         if (!$this->apellido) {
@@ -42,7 +43,6 @@ class Vendedor extends ActiveRecord
             self::$errores[] = "Formato no valido";
 
         }
-
         return self::$errores;
     }
 

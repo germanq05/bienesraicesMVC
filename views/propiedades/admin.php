@@ -85,7 +85,7 @@
 
                         </form>
 
-                        <a href="/admin/vendedores/actualizar.php?id=<?php echo $vendedor->id ?>" class="boton-amarillo-block">Actualizar</a>
+                        <a href="/public/vendedores/actualizar?id=<?php echo $vendedor->id ?>" class="boton-amarillo-block">Actualizar</a>
                     </td>
                 </tr>
 
