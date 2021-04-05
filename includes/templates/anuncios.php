@@ -22,15 +22,15 @@
 
                 <ul class="iconos-caracteristicas">
                     <li>
-                        <img class="icono" src="/../publicbuild/img/icono_wc.svg" alt="icono wc" loading="lazy">
+                        <img class="icono" src="build/img/icono_wc.svg" alt="icono wc" loading="lazy">
                         <p><?php echo $propiedad->wc; ?></p>
                     </li>
                     <li>
-                        <img class="icono" src="/../publicbuild/img/icono_estacionamiento.svg" alt="icono estacionamiento" loading="lazy">
+                        <img class="icono" src="build/img/icono_estacionamiento.svg" alt="icono estacionamiento" loading="lazy">
                         <p><?php echo $propiedad->estacionamiento; ?></p>
                     </li>
                     <li>
-                        <img class="icono" src="/../publicbuild/img/icono_dormitorio.svg" alt="icono dormitorio" loading="lazy">
+                        <img class="icono" src="build/img/icono_dormitorio.svg" alt="icono dormitorio" loading="lazy">
                         <p><?php echo $propiedad->habitacion; ?></p>
                     </li>
                 </ul>

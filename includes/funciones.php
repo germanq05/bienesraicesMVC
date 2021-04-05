@@ -73,7 +73,7 @@ function validarORedireccionar(string $url)
     $id = filter_var($id, FILTER_VALIDATE_INT); //Valida que sea un numero y no un script o string
     //Valida que sea un id valido, si no lo es lo redirecciona a index
     if (!$id) {
-        header("Location: /../public${url}");
+        header("Location: /../${url}");
     }
     return $id;
 }

@@ -34,11 +34,11 @@
                 <tr>
                     <td> <?php echo $propiedad->id; ?> </td>
                     <td> <?php echo $propiedad->titulo; ?> </td>
-                    <td> <img src="/public/imagenes/<?php echo $propiedad->imagen; ?>" class="imagen-tabla"> </td>
+                    <td> <img src="/imagenes/<?php echo $propiedad->imagen; ?>" class="imagen-tabla"> </td>
                     <td> $ <?php echo $propiedad->precio; ?> </td>
                     <td>
 
-                        <form method="POST" action="/public/propiedades/eliminar" class="w-100">
+                        <form method="POST" action="/propiedades/eliminar" class="w-100">
 
                             <input type="hidden" name="id" value="<?php echo $propiedad->id; ?>">
                             <input type="hidden" name="tipo" value="propiedad">
@@ -46,7 +46,7 @@
 
                         </form>
 
-                        <a href="/public/propiedades/actualizar?id=<?php echo $propiedad->id ?>" class="boton-amarillo-block">Actualizar</a>
+                        <a href="/propiedades/actualizar?id=<?php echo $propiedad->id ?>" class="boton-amarillo-block">Actualizar</a>
                     </td>
                 </tr>
 
@@ -77,7 +77,7 @@
                     <td> <?php echo $vendedor->telefono; ?> </td>
                     <td>
 
-                        <form method="POST" class="w-100" action="/public/vendedores/eliminar">
+                        <form method="POST" class="w-100" action="/vendedores/eliminar">
 
                             <input type="hidden" name="id" value="<?php echo $vendedor->id; ?>">
                             <input type="hidden" name="tipo" value="vendedor">
@@ -85,7 +85,7 @@
 
                         </form>
 
-                        <a href="/public/vendedores/actualizar?id=<?php echo $vendedor->id ?>" class="boton-amarillo-block">Actualizar</a>
+                        <a href="/vendedores/actualizar?id=<?php echo $vendedor->id ?>" class="boton-amarillo-block">Actualizar</a>
                     </td>
                 </tr>
 

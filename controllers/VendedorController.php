@@ -35,7 +35,7 @@ class VendedorController
     public static function actualizar(Router $router)
     {
 
-        $id = validarORedireccionar('public/admin');
+        $id = validarORedireccionar('/admin');
 
         //Obtener datos del vendedor
         $vendedor = Vendedor::find($id);

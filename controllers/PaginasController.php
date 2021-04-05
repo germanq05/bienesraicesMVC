@@ -31,25 +31,28 @@ class PaginasController
     }
     public static function propiedad(Router $router)
     {
-        $id = validarTipoContenido('/public/propiedades');
-
+        $id = validarORedireccionar('/propiedades');
         //Busca la propiedad
         $propiedad = Propiedad::find($id);
-
         $router->render('paginas/propiedad',[
             'propiedad' => $propiedad
         ]);
     }
-    public static function blog()
+    public static function blog(Router $router)
     {
-        echo "desde index";
+        $router->render('paginas/blog');
     }
-    public static function entrada()
+    public static function entrada(Router $router)
     {
-        echo "desde index";
+        $router->render('paginas/entrada');
     }
-    public static function contacto()
+    public static function contacto(Router $router)
     {
-        echo "desde index";
+        if($_SERVER['REQUEST_METHOD'] === 'POST'){
+            debuguear($_POST);
+        }
+        $router->render('paginas/contacto',[
+
+        ]);
     }
 }
