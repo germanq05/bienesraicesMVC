@@ -28,7 +28,7 @@
     <header class="header <?php echo $inicio ? 'inicio' : ''; ?>">
         <div class="contenedor contenido-header">
             <div class="barra">
-                <a href="/">
+                <a href="/public">
                     <img src="/../public/build/img/logo.svg" alt="imagen logo">
                 </a>
                 <div class="mobile-menu">
@@ -39,13 +39,13 @@
                     <img src="/../public/build/img/dark-mode.svg" alt="Boton Dark" class="dark-mode-boton">
 
                     <nav class="navegacion">
-                        <a href="nosotros.php">Nosotros</a>
-                        <a href="anuncios.php">Anuncios</a>
-                        <a href="blog.php">Blog</a>
-                        <a href="contacto.php">Contacto</a>
+                        <a href="public/nosotros">Nosotros</a>
+                        <a href="public/propiedades">Anuncios</a>
+                        <a href="public/blog">Blog</a>
+                        <a href="public/contacto">Contacto</a>
 
                         <?php if ($auth) : ?>
-                            <a href="/cerrar-sesion.php">Cerrar Sesion</a>
+                            <a href="public/cerrar-sesion">Cerrar Sesion</a>
                         <?php endif; ?>
 
                     </nav>
