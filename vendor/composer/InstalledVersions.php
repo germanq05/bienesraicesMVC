@@ -30,7 +30,7 @@ private static $installed = array (
     'aliases' => 
     array (
     ),
-    'reference' => '9f3f660fb5959ff16f95566af92d6a9f24ecbee9',
+    'reference' => '9a5878f5aae9742cdfb04763867a694de4e629ee',
     'name' => 'german/bienesraices',
   ),
   'versions' => 
@@ -42,7 +42,7 @@ private static $installed = array (
       'aliases' => 
       array (
       ),
-      'reference' => '9f3f660fb5959ff16f95566af92d6a9f24ecbee9',
+      'reference' => '9a5878f5aae9742cdfb04763867a694de4e629ee',
     ),
     'guzzlehttp/psr7' => 
     array (
@@ -61,6 +61,15 @@ private static $installed = array (
       array (
       ),
       'reference' => 'abbf18d5ab8367f96b3205ca3c89fb2fa598c69e',
+    ),
+    'phpmailer/phpmailer' => 
+    array (
+      'pretty_version' => 'v6.4.0',
+      'version' => '6.4.0.0',
+      'aliases' => 
+      array (
+      ),
+      'reference' => '050d430203105c27c30efd1dce7aa421ad882d01',
     ),
     'psr/http-message' => 
     array (
