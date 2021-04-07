@@ -53,7 +53,7 @@ if (!isset($inicio)) {
             </div>
             <!--Cierre de la barra-->
 
-            <?php echo $inicio ? "<h1>Venta de Casas y Departamentos</h1>" : ''; ?>
+            <?php echo $inicio ? "<h1 data-cy='heading-sitio'>Venta de Casas y Departamentos</h1>" : ''; ?>
 
         </div>
     </header>
