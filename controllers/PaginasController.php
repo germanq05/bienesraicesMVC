@@ -100,9 +100,9 @@ class PaginasController
 
             //Enviar el email
             if($mail->send()){
-                $mensaje = "Mensaje enviado";
+                $mensaje = "Mensaje Enviado";
             }else{
-                $mensaje = "Mensaje no enviado";
+                $mensaje = "Mensaje no Enviado";
             }
 
         }

@@ -18,14 +18,14 @@
 
 </section>
 
-<section class="imagen-contacto">
+<section data-cy="imagen-contacto" class="imagen-contacto">
     <h2>Encuentra la Casa de tus Sueños</h2>
     <p>Llena el formulario de contacto y un asesor se pondra en contacto contigo a la brevedad</p>
     <a href="contacto" class="boton-amarillo">Contactanos</a>
 </section>
 
 <div class="contenedor seccion seccion-inferior">
-    <section class="blog">
+    <section data-cy="blog" class="blog">
         <h3 class="titulo">Nuestro Blog</h3>
 
         <article class="entrada-blog">
@@ -65,7 +65,7 @@
     </section>
 
 
-    <section class="testimoniales ">
+    <section data-cy="testimoniales" class="testimoniales ">
         <h3 class="titulo">Testimoniales</h3>
         <div class="testimonial">
             <blockquote>El personal se comporto de una excelente forma, muy buena atencion y la casa que me ofreieron cumple con todas mis expectativas.</blockquote>

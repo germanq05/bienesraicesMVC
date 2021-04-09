@@ -43,21 +43,21 @@ function mostrarMetodosContacto(e) {
     if (e.target.value === 'telefono') {
         contactoDiv.innerHTML = `
         <label for="telefono">Numero de Telefono</label>
-        <input type="tel" id="telefono" placeholder="Tu telefono..." name="contacto[telefono]">
+        <input data-cy="input-telefono" type="tel" id="telefono" placeholder="Tu telefono..." name="contacto[telefono]">
         
         <p>Elija la Fecha y Hora para la llamada</p>
 
             <label for="fecha">Fecha</label>
-            <input type="date" id="fecha" name="contacto[fecha]">
+            <input data-cy="input-fecha" type="date" id="fecha" name="contacto[fecha]">
 
             <label for="hora">Hora</label>
-            <input type="time" id="hora" min="08:00" max="20:00" name="contacto[hora]">
+            <input data-cy="input-hora" type="time" id="hora" min="08:00" max="20:00" name="contacto[hora]">
 
         `;
     } else {
         contactoDiv.innerHTML = `
         <label for="email">E-mail a Contactar</label>
-        <input type="email" id="email" placeholder="Tu email..."name="contacto[email]" required>
+        <input data-cy="input-email" type="email" id="email" placeholder="Tu email..."name="contacto[email]" required>
         `;
 
     }

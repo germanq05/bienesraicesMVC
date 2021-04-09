@@ -1,4 +1,4 @@
-/// <references types="cypress" />
+/// <reference types="cypress" />
 describe('Carga la Pagina Principal', () => { //Describe que hace esta prueba
     it('Prueba el Header de la Pagina Principal', () => {
         cy.visit('/'); //Visita esa url
@@ -36,7 +36,7 @@ describe('Carga la Pagina Principal', () => { //Describe que hace esta prueba
         cy.get('[data-cy="enlace-propiedad"]').first().click();
         cy.get('[data-cy="titulo-propiedad"]').should('exist');
 
-        cy.wait(1000); //espera 1seg
+        //cy.wait(1000); //espera 1seg
         cy.go('back'); //Vuelve a la pagina principal
     });
 
@@ -49,7 +49,36 @@ describe('Carga la Pagina Principal', () => { //Describe que hace esta prueba
         //Entrar al link, ver si el titulo esta bien y salir
         cy.get('[data-cy="todas-propiedades"]').click();
         cy.get('[data-cy="heading-propiedades"]').invoke('text').should('equals', 'Casas y Departamentos en Venta');
-        cy.wait(1000);
+
+        //cy.wait(1000);
         cy.go('back');
     });
+
+    it('Prueba de Bloque de Contacto', () => {
+        cy.get('[data-cy="imagen-contacto"]').should('exist');
+        cy.get('[data-cy="imagen-contacto"]').find('h2').invoke('text').should('equal', 'Encuentra la Casa de tus Sueños');
+        cy.get('[data-cy="imagen-contacto"]').find('p').invoke('text').should('equal', 'Llena el formulario de contacto y un asesor se pondra en contacto contigo a la brevedad');
+
+        cy.get('[data-cy="imagen-contacto"').find('a').invoke('attr', 'href')
+            .then(href => {
+                cy.visit(href);
+            })
+        cy.get('[data-cy="heading-contacto"]').should('exist');
+
+        //cy.wait(1000);
+        cy.visit('/');
+    });
+
+    it('Prueba los Testiomoniales y el Blog', () => {
+        cy.get('[data-cy="blog"]').should('exist');
+        cy.get('[data-cy="blog"]').find('h3').invoke('text').should('equal', 'Nuestro Blog');
+        cy.get('[data-cy="blog"]').find('h3').invoke('text').should('not.equal', 'Blog');
+        cy.get('[data-cy="blog"]').find('img').should('have.length', 2); //Si existen 2 imagenes
+
+
+        cy.get('[data-cy="testimoniales"]').should('exist');
+        cy.get('[data-cy="testimoniales"]').find('h3').invoke('text').should('equal', 'Testimoniales');
+        cy.get('[data-cy="testimoniales"]').find('h3').invoke('text').should('not.equal', 'Nuestro Testimoniales');
+
+    })
 });

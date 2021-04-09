@@ -1,8 +1,8 @@
 <main class="contenedor seccion">
-        <h1>Conoce Sobre Nosotros</h1>
+        <h1 data-cy="nosotros-titulo" >Conoce Sobre Nosotros</h1>
 
         <div class="contenido-nosotros">
-            <div class="imagen">
+            <div data-cy="nosotros-imagen" class="imagen">
                 <picture>
                     <source srcset="build/img/nosotros.webp" type="image/webp">
                     <source srcset="build/img/nosotros.jpg" type="image/jepg">
@@ -10,7 +10,7 @@
                 </picture>
             </div>
 
-            <div class="texto-nosotros">
+            <div data-cy="nosotros-texto" class="texto-nosotros">
                 <blockquote>25 Años de Experiencia</blockquote>
 
                 <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Doloremque minima at inventore blanditiis corporis sit possimus rerum obcaecati distinctio, vitae, ut voluptate sint dolorem repellendus placeat eaque reprehenderit nihil similique
